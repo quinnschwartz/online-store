@@ -9,7 +9,7 @@ export class AlbumService {
 
 
   constructor(private angularFire: AngularFire) {
-    this.albums = angularFire.database.list('/albums');
+    this.albums = angularFire.database.list('albums');
   }
 
   getAlbums() {
@@ -23,4 +23,6 @@ export class AlbumService {
   getAlbumById(albumId: number){
     return this.angularFire.database.object('albums/' + albumId);
   }
+
+
 }
